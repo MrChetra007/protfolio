@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NNP Cambodia | Beauty & Trust</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;700&family=Moul&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --nnp-gold: #D4AF37;
+            --soft-bg: #F8F9FA;
+            --card-white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --radius: 28px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            line-height: 1.8; /* Critical for Khmer scripts */
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0 40px;
+        }
+
+        .logo {
+            font-family: 'Moul', serif;
+            color: var(--nnp-gold);
+            font-size: 1.5rem;
+        }
+
+        /* Bento Grid System */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(160px, auto);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Grid Spanning */
+        .hero-card {
+            grid-column: span 2;
+            grid-row: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(135deg, #fff 0%, #fff9e6 100%);
+        }
+
+        .wide-card { grid-column: span 2; }
+        .tall-card { grid-row: span 2; }
+
+        /* Typography */
+        h1 {
+            font-family: 'Moul', serif;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .gold-text { color: var(--nnp-gold); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--nnp-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            width: fit-content;
+        }
+
+        .live-badge {
+            background: #ff4757;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Product Card specific */
+        .product-img {
+            width: 100px;
+            height: 100px;
+            background: #eee;
+            margin: 0 auto 15px;
+            border-radius: 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-card, .wide-card {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">NNP Cambodia</div>
+        <div class="live-badge">កំពុងបន្តផ្ទាល់ (LIVE)</div>
+    </header>
+
+    <div class="bento-grid">
+        <div class="card hero-card">
+            <h1>សម្រស់ពិត <br><span class="gold-text">ទំនុកចិត្តពិត</span></h1>
+            <p>ស្វែងរកអាថ៌កំបាំងនៃស្បែកភ្លឺថ្លាជាមួយ NNP Cambodia ស្តង់ដារគុណភាពខ្ពស់។</p>
+            <a href="#" class="btn">មើលផលិតផល</a>
+        </div>
+
+        <div class="card" style="background: var(--nnp-gold); color: white;">
+            <h2 style="font-family: 'Moul';">១២០០+</h2>
+            <p>ផ្ទះមនុស្សធម៌ដែលបានសាងសង់ជូនប្រជាពលរដ្ឋ</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <div class="product-img"></div>
+            <p>ឡេការពារកម្តៅថ្ងៃ</p>
+            <strong class="gold-text">$12.00</strong>
+        </div>
+
+        <div class="card wide-card" style="background: #121212; color: white;">
+            <h3>ចូលរួមទស្សនាការផ្សាយផ្ទាល់</h3>
+            <p style="opacity: 0.7; font-size: 0.9rem;">ជួបជាមួយលោកស្រី ទ្រី ដាណា ឥឡូវនេះ</p>
+            <a href="#" class="btn" style="background: #fff; color: #000;">ទស្សនាឥឡូវ</a>
+        </div>
+
+        <div class="card wide-card" style="background: #eef2ff; border: none;">
+            <h3 style="color: #3730a3;">ក្លាយជាតំណាងចែកចាយ NNP</h3>
+            <p>ឱកាសបង្កើតអាជីវកម្មផ្ទាល់ខ្លួនជាមួយដើមទុនតិចបំផុត។</p>
+            <a href="#" style="color: #3730a3; font-weight: bold; margin-top: 10px; display: block;">ចុះឈ្មោះទីនេះ →</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Smooth scroll or interactive effects
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            console.log('User browsing NNP collection');
+        });
+    });
+</script>
+
+</body>
+</html>
